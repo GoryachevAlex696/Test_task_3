@@ -46,12 +46,13 @@
 
     <?php
 
-    $the_set_of_natural_numbers = isset($_GET['n']) ? $_GET['n'] : 0;
-    $the_desired_number = isset($_GET['k']) ? $_GET['k'] : 0;
+    $the_set_of_natural_numbers = isset($_GET['n']) ? $_GET['n'] : 0; // вводим количество n первых натуральных чисел
+    $the_desired_number = isset($_GET['k']) ? $_GET['k'] : 0; // задаём число k для поискаеё места в n первых натуральных чисел
     $the_set_of_natural_numbers_2 = (int) $the_set_of_natural_numbers;
     $the_desired_number_2 = (int) $the_desired_number;
+    // преобразуем переменные в целочисленный тип
 
-
+    //создаем ряд n первых натуральных чисел
     function add_prev($the_set_of_natural_numbers_2, $the_desired_number_2)
     {
         function count_added_strings($str_len, $the_set_of_natural_numbers_2, $the_desired_number_2)
@@ -70,6 +71,7 @@
         return $res;
     }
 
+   
     function remove_prev($the_desired_number_2)
     {
         function count_deleted_strings_with_k_dig($the_desired_number_2)
@@ -92,6 +94,7 @@
         $res += count_deleted_strings_with_digits_greater($the_desired_number_2);
         return $res;
     }
+    // проверка корректности ввода 
     if (($t_str > $p_str) || (empty($t_str)) || (empty($p_str)) || (!is_numeric($t_str)) || (!is_numeric($p_str)) || ($t_str < 0) || ($p_str < 0))
         echo "Введите корректные входные данные...";
     else {
