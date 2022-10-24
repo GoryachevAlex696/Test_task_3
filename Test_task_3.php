@@ -52,7 +52,7 @@
     $the_desired_number_2 = (int) $the_desired_number;
     // преобразуем переменные в целочисленный тип
 
-    //создаем ряд n первых натуральных чисел
+    
     function add_prev($the_set_of_natural_numbers_2, $the_desired_number_2)
     {
         function count_added_strings($str_len, $the_set_of_natural_numbers_2, $the_desired_number_2)
